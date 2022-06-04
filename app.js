@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.json({
     type: 'get',
     number: 1,
@@ -10,9 +10,28 @@ app.get('/', function (req, res) {
   });
 })
 
-app.post('/', function (req, res) {
+app.post('/', (req, res) => {
   res.json({
     type: 'post',
+    number: 1,
+    nama: 'Farhanunnasih',
+    npm: '2042408'
+  });
+})
+
+app.put('/', (req, res) => {
+  res.json({
+    type: 'put',
+    number: 1,
+    nama: 'Farhanunnasih',
+    npm: '2042408'
+  });
+})
+
+
+app.delete('/', (req, res) => {
+  res.json({
+    type: 'delete',
     number: 1,
     nama: 'Farhanunnasih',
     npm: '2042408'
